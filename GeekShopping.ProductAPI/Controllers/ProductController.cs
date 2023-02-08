@@ -55,10 +55,12 @@ namespace GeekShopping.ProductAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(long id)
         {
-            if (!await _repository.Delete(id))
+            var status = await _repository.Delete(id);
+
+            if (!status)
                 return BadRequest();
             else
-                return Ok();
+                return Ok(status);
         }
     }
 }
