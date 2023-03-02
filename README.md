@@ -33,17 +33,19 @@ Projeto de uma loja virtual utilizando microserviços e boas práticas do .Net6
 ## :sparkles: Funcionalidades ##
 
 :heavy_check_mark: API para consumo do banco de dados e lógica de negócio;\
-:heavy_check_mark: Aplicação Web;
+:heavy_check_mark: Aplicação Web; \
+:heavy_check_mark: Validação de token JWT
 
 ## :rocket: Tecnologias ##
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [.Net6](https://dotnet.microsoft.com/pt-br/)
+- [Duende-IdentityServer](https://duendesoftware.com/products/identityserver)
 
 ## :white_check_mark: Pré requisitos ##
 
-Antes de começar :checkered_flag:, você precisa ter o [Git](https://git-scm.com) e o [Node](https://nodejs.org/en/) instalados em sua maquina.
+Antes de começar :checkered_flag:, você precisa ter o [Git](https://git-scm.com) instalado em sua maquina.
 
 ## :checkered_flag: Começando ##
 
