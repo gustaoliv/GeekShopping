@@ -34,7 +34,8 @@ Projeto de uma loja virtual utilizando microserviços e boas práticas do .Net6
 
 :heavy_check_mark: API para consumo do banco de dados e lógica de negócio;\
 :heavy_check_mark: Aplicação Web; \
-:heavy_check_mark: Validação de token JWT
+:heavy_check_mark: Validação de token JWT; \
+:heavy_check_mark: Listagem de produtos;
 
 ## :rocket: Tecnologias ##
 
