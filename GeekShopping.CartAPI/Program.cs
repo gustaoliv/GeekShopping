@@ -2,6 +2,7 @@
 using AutoMapper;
 using GeekShopping.CartAPI.Config;
 using GeekShopping.CartAPI.Model.Context;
+using GeekShopping.CartAPI.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,7 +33,7 @@ IMapper mapper = MappingConfig.RegiterMaps().CreateMapper();
 builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-//builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ICartRepository, CartRepository>();
 
 
 builder.Services.AddControllers();
