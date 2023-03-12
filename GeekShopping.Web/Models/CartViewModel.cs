@@ -2,7 +2,7 @@
 {
     public class CartViewModel
     {
-        public CartHeaderVO CartHeader { get; set; }
-        public IEnumerable<CartDetailVO> CartDetails { get; set; }
+        public CartHeaderViewModel CartHeader { get; set; }
+        public IEnumerable<CartDetailViewModel> CartDetails { get; set; }
     }
 }
