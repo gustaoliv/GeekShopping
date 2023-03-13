@@ -37,7 +37,8 @@ Projeto de uma loja virtual utilizando microserviços e boas práticas do .Net6
 :heavy_check_mark: Validação de token JWT; \
 :heavy_check_mark: Listagem de produtos; \
 :heavy_check_mark: Microsserviço de carrinho de compras; \
-
+:heavy_check_mark: Microsserviço de cupons de desconto; \
+:heavy_check_mark: Página de checkout; 
 
 ## :rocket: Tecnologias ##
 
