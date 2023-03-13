@@ -22,5 +22,7 @@ namespace GeekShopping.CouponAPI.Repository
             var coupon = await _context.Coupons.FirstOrDefaultAsync(c => c.CouponCode == couponCode);
             return _mapper.Map<CouponVO>(coupon);
         }
+
+
     }
 }
