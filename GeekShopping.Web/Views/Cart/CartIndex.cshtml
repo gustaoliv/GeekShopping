@@ -80,6 +80,15 @@
                                     Apply
                                 </button>
                             }
+                            else if(!string.IsNullOrEmpty(Model.CartHeader.CouponCode) && Model.CartHeader.DiscountTotal <= 0)
+                            {
+                                <span>Coupon:</span>
+                                <input asp-for="CartHeader.CouponCode"/>
+                                <button type="submit" asp-action="ApplyCoupon" class="btn-success">
+                                    Apply
+                                </button>
+                                <span class="text-danger">Invalid Coupon</span>
+                            }
                             else
                             {
                                 <span>Coupon:</span>
