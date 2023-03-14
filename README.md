@@ -38,7 +38,8 @@ Projeto de uma loja virtual utilizando microserviços e boas práticas do .Net6
 :heavy_check_mark: Listagem de produtos; \
 :heavy_check_mark: Microsserviço de carrinho de compras; \
 :heavy_check_mark: Microsserviço de cupons de desconto; \
-:heavy_check_mark: Página de checkout; 
+:heavy_check_mark: Página de checkout; \
+:heavy_check_mark: Integração com RabbitMQ; 
 
 ## :rocket: Tecnologias ##
 
@@ -46,6 +47,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - [.Net6](https://dotnet.microsoft.com/pt-br/)
 - [Duende-IdentityServer](https://duendesoftware.com/products/identityserver)
+- [RabbitMQ](https://www.rabbitmq.com/)
 
 ## :white_check_mark: Pré requisitos ##
 
@@ -54,14 +56,30 @@ Antes de começar :checkered_flag:, você precisa ter o [Git](https://git-scm.co
 ## :checkered_flag: Começando ##
 
 ```bash
+
 # Clone este repositório
 $ https://github.com/gustaoliv/GeekShopping.git
 
 # Entre na pasta
 $ cd GeekShopping
 
+# Configure as suas variáveis nos appSettings.json
+
 # Inicializar RabbitMQ
 $ docker run -d --hostname my-rabbit --name some-rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+
+# Buildando a solução
+$ dotnet build
+
+# Make Migrations
+$ dotnet ef migrations update
+
+# Inicializando as aplicações
+$ dotnet run GeekShopping.IdentityServer
+$ dotnet run GeekShopping.ProductAPI
+$ dotnet run GeekShopping.CartAPI
+$ dotnet run GeekShopping.CouponAPI
+$ dotnet run GeekShopping.Web
 
 ```
 
