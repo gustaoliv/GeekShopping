@@ -83,7 +83,8 @@ namespace GeekShopping.CartAPI.Controllers
             if (cartVO == null)
                 return NotFound();
 
-            vo.CartDetails = cartVO.CartDetails;
+            vo.CartDetails  = cartVO.CartDetails;
+            vo.DateTime     = DateTime.Now;
             //TASK RabbitMQ logic comes here!
 
             return Ok(vo);
