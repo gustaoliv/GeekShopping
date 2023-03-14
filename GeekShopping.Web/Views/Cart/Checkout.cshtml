@@ -35,6 +35,10 @@
                             <input asp-for="CartHeader.Phone" class="form-control">
                         </div>
                         <div class="col-12">
+                            <label class="col-form-label">Card Number:</label>
+                            <input asp-for="CartHeader.CardNumber" class="form-control">
+                        </div>
+                        <div class="col-12">
                             <label class="col-form-label">CVV:</label>
                             <input asp-for="CartHeader.CVV" class="form-control">
                         </div>
@@ -69,23 +73,25 @@
                             {
                                 <div class="row h-100">
                                     <div class="col-6">
-                                        <span style="font-size:20px;">
+                                        <span style="font-size:18px;">
                                             @item.Product.Name
                                         </span>
                                     </div>
 
                                     <div class="col-3">
-                                        <span style="font-size:17px;">
+                                        <span style="font-size:15px;">
                                             @string.Format("{0:c}", item.Product.Price)
                                         </span>
                                     </div>
 
                                     <div class="col-3">
-                                        <span style="font-size:17px;">
+                                        <span style="font-size:15px;">
                                             @string.Format("{0:c}", item.count)
                                         </span>
                                     </div>
                                 </div>
+
+                                <hr/>
                             }
 
                             <div class="row">
