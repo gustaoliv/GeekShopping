@@ -39,7 +39,9 @@ Projeto de uma loja virtual utilizando microserviços e boas práticas do .Net6
 :heavy_check_mark: Microsserviço de carrinho de compras; \
 :heavy_check_mark: Microsserviço de cupons de desconto; \
 :heavy_check_mark: Página de checkout; \
-:heavy_check_mark: Integração com RabbitMQ; 
+:heavy_check_mark: Integração com RabbitMQ; \
+:heavy_check_mark: Microsserviço de tratamento de pedidos; 
+
 
 ## :rocket: Tecnologias ##
 
@@ -80,6 +82,7 @@ $ dotnet run GeekShopping.ProductAPI
 $ dotnet run GeekShopping.CartAPI
 $ dotnet run GeekShopping.CouponAPI
 $ dotnet run GeekShopping.Web
+$ dotnet run GeekShopping.OrderAPI
 
 ```
 
