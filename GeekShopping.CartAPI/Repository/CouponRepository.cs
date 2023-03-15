@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-using GeekShopping.CartAPI.Data.ValueObjects;
-using Microsoft.EntityFrameworkCore;
+﻿using GeekShopping.CartAPI.Data.ValueObjects;
 using System.Net;
 using System.Net.Http.Headers;
 using System.Text.Json;
@@ -11,7 +9,10 @@ namespace GeekShopping.CartAPI.Repository
     {
         private readonly HttpClient _client;
 
-
+        public CouponRepository(HttpClient client)
+        {
+            _client = client;
+        }
 
         public async Task<CouponVO> GetCouponByCouponCode(string couponCode, string token)
         {
