@@ -45,7 +45,7 @@ namespace GeekShopping.PaymentAPI.MessageConsumer
                 ProcessPayment(vo).GetAwaiter().GetResult();
                 _channel.BasicAck(evt.DeliveryTag, false);
             };
-            _channel.BasicConsume("checkoutQueue", false, consumer);
+            _channel.BasicConsume("orderPaymentProcessQueue", false, consumer);
             return Task.CompletedTask;
         }
 
