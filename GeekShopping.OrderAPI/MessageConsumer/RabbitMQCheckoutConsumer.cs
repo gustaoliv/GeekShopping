@@ -78,6 +78,8 @@ namespace GeekShopping.OrderAPI.MessageConsumer
             }
 
             await _repository.AddOrder(order);
+
+
         }
     }
 }
