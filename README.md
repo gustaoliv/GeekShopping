@@ -40,7 +40,8 @@ Projeto de uma loja virtual utilizando microserviços e boas práticas do .Net6
 :heavy_check_mark: Microsserviço de cupons de desconto; \
 :heavy_check_mark: Página de checkout; \
 :heavy_check_mark: Integração com RabbitMQ; \
-:heavy_check_mark: Microsserviço de tratamento de pedidos; 
+:heavy_check_mark: Microsserviço de tratamento de pedidos; \
+:heavy_check_mark: Microsserviço para processamento do pagamento de compras; 
 
 
 ## :rocket: Tecnologias ##
