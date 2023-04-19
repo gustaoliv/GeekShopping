@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="https://github.com/gustaoliv/GeekShopping/blob/main/GeekShopping.Web/wwwroot/images/geek_shopping.png" alt="GeekShopping" />
+  <img src="https://github.com/gustaoliv/GeekShopping/blob/main/GeekShopping.Web/wwwroot/images/geek_shopping.png" alt="GeekShopping" width="100px"/>
 
   &#xa0;
 </div>
@@ -10,7 +10,7 @@
 <!-- Status -->
 
 <h4 align="center"> 
-	🚧  Em construção...  🚧
+	🚀  Concluído  🚀
 </h4> 
 
 <hr>
@@ -30,6 +30,15 @@
 
 Projeto de uma loja virtual utilizando microserviços e boas práticas do .Net6
 
+<div align="center"> 
+  <img src="GenericImages/Print1.png" alt="TrulyExpenses Website" />
+  <img src="GenericImages/Print2.png" alt="TrulyExpenses Website" />
+  <img src="GenericImages/Print3.png" alt="TrulyExpenses Website" />
+  <img src="GenericImages/Print4.png" alt="TrulyExpenses Website" />
+  &#xa0;
+</div>
+
+
 ## :sparkles: Funcionalidades ##
 
 :heavy_check_mark: Microsserviço de produtos;\
@@ -41,8 +50,8 @@ Projeto de uma loja virtual utilizando microserviços e boas práticas do .Net6
 :heavy_check_mark: Página de checkout; \
 :heavy_check_mark: Integração com RabbitMQ; \
 :heavy_check_mark: Microsserviço de tratamento de pedidos; \
-:heavy_check_mark: Microsserviço para processamento do pagamento de compras; 
-
+:heavy_check_mark: Microsserviço para processamento do pagamento de compras; \
+:heavy_check_mark: Microsserviço para envio de emails; 
 
 ## :rocket: Tecnologias ##
 
@@ -78,12 +87,14 @@ $ dotnet build
 $ dotnet ef migrations update
 
 # Inicializando as aplicações
-$ dotnet run GeekShopping.IdentityServer
-$ dotnet run GeekShopping.ProductAPI
 $ dotnet run GeekShopping.CartAPI
+$ dotnet run GeekShopping.Email
 $ dotnet run GeekShopping.CouponAPI
-$ dotnet run GeekShopping.Web
+$ dotnet run GeekShopping.IdentityServer
 $ dotnet run GeekShopping.OrderAPI
+$ dotnet run GeekShopping.ProductAPI
+$ dotnet run GeekShopping.Web
+$ dotnet run GeekShopping.PaymentAPI
 
 ```
 
