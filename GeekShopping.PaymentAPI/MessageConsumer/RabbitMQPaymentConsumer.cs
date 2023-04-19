@@ -15,7 +15,7 @@ namespace GeekShopping.PaymentAPI.MessageConsumer
         private IModel _channel;
         private readonly IProcessPayment _processPayment;
         private IRabbitMQMessageSender _rabbitMQMessageSender;
-        private const string ExchangeName = "FanoutPaymentUpdateExchange";
+        private const string ExchangeName = "DirectPaymentUpdateExchange";
         private string queueName = "";
 
         public RabbitMQPaymentConsumer(IProcessPayment processPayment, IRabbitMQMessageSender rabbitMQMessageSender)
