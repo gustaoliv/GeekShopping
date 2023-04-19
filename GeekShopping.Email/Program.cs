@@ -32,8 +32,6 @@ builder.Services.AddScoped<IEmailRepository, EmailRepository>();
 
 builder.Services.AddHostedService<RabbitMQPaymentConsumer>();
 
-//builder.Services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
-
 builder.Services.AddControllers();
 
 builder.Services.AddAuthentication("Bearer")
@@ -99,6 +97,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

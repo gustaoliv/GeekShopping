@@ -31,7 +31,7 @@ namespace GeekShopping.PaymentAPI.MessageConsumer
             };
             _connection = factory.CreateConnection();
             _channel = _connection.CreateModel();
-            _channel.ExchangeDeclare(ExchangeName, ExchangeType.Fanout);
+            _channel.ExchangeDeclare(ExchangeName, ExchangeType.Direct);
             queueName = _channel.QueueDeclare().QueueName;
 
             _channel.QueueBind(queueName, ExchangeName, "");

@@ -13,7 +13,7 @@ namespace GeekShopping.Email.MessageConsumer
         private IConnection _connection;
         private IModel _channel;
         private const string ExchangeName = "DirectPaymentUpdateExchange";
-        string queueName;
+        private const string PaymentEmailUpdateQueueName = "PaymentEmailUpdateQueueName";
 
         public RabbitMQPaymentConsumer(EmailRepository repository)
         {
@@ -29,9 +29,10 @@ namespace GeekShopping.Email.MessageConsumer
             _channel = _connection.CreateModel();
 
 
-            _channel.ExchangeDeclare(ExchangeName, ExchangeType.Fanout);
-            queueName = _channel.QueueDeclare().QueueName;
-            _channel.QueueBind(queueName, ExchangeName, "");   
+            _channel.ExchangeDeclare(ExchangeName, ExchangeType.Direct);
+            _channel.QueueDeclare(PaymentEmailUpdateQueueName, false, false, false, null);
+
+            _channel.QueueBind(PaymentEmailUpdateQueueName, ExchangeName, "PaymentEmail");   
         }
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
@@ -45,7 +46,7 @@ namespace GeekShopping.Email.MessageConsumer
                 ProcessLogs(message).GetAwaiter().GetResult();
                 _channel.BasicAck(evt.DeliveryTag, false);
             };
-            _channel.BasicConsume("orderPaymentResultQueue", false, consumer);
+            _channel.BasicConsume(PaymentEmailUpdateQueueName, false, consumer);
             return Task.CompletedTask;
         }
 
